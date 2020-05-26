@@ -31,7 +31,33 @@
     display: block;
     clear: both;
   }
+.headline{
+  margin-top: 0;
+  color:white;
+ margin-left:10%;
 
+}
+  header{
+    background-color: black;
+  }
+
+  .headline{
+    float :left;
+
+  }
+
+  .menu{
+    float:right;
+    margin-right: 10%;
+  }
+
+  .glyphicon{
+    color: white;
+  }
+
+  .field{
+    width: 20%;
+  }
  footer{
      
      padding-left: 70%;
