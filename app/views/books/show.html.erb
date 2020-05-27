@@ -1,13 +1,8 @@
-
+<p id="notice"><%=  notice %></p>
 <div class="container"> <!-- ここを追加 -->
     <div class="row">   <!-- ここを追加 -->
         <div class="col-lg-3" > 
-        <%= render 'books/list', books: @book,user: current_user %>
-
-
-          
-   	
-            
+        <%= render 'books/list', books: @book,user: current_user %>     
         </div>
         
         <div class="col-lg-9">
@@ -25,7 +20,7 @@
                     <td><%= @book.title %></td>
                     <td><%= @book.body %></td>
                     <td><%= link_to 'Edit', edit_book_path(@book) %></td>
-                    <td><%= link_to "削除", book_path(@book), method: :delete,data: { confirm: 'Are you sure?' } %><td>
+                    <td><%= link_to "Destroy", book_path(@book), method: :delete,data: { confirm: 'Are you sure?' } %><td>
                   </tr>
               </tbody>
             </table>
