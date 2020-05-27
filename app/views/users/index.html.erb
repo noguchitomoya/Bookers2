@@ -2,35 +2,8 @@
 <p>Find me in app/views/users/index.html.erb</p>
  <div class="container"> <!-- ここを追加 -->
     <div class="row">   <!-- ここを追加 -->
-        <div class="col-lg-3" style="background-color: orange;"> 
-
-
-                 <%= form_for(@book,url:books_path) do |f| %>
-                  <% if @book.errors.any? %>
-                    <%= @book.errors.count %>件のエラーが発生しました
-                    <% @book.errors.full_messages.each do |message| %>
-                        <%= message %>
-                    <% end %>
-                  <%end%>
-
-                  <div class="field">
-                    <%= f.label :title %><br>
-                    <%= f.text_field :title ,:size=>"35*40" %>
-                  </div>
-                  
-                  <div class="field">
-                    <%= f.label :body %><br>
-                    <%= f.text_area :body ,:size=>"35*40" %>
-                  </div>
-                  <div class="actions">
-                    <button type="button" class="btn btn-primary">Primary <%= f.submit %></button>
-                    <%= f.submit %>
-                  </div>
-                <% end %>
-
-            
-                    <p><%= link_to "プロフィール編集", edit_user_path(current_user.id), class: "pull-right" %></p>
-            
+        <div class="col-lg-3" > 
+                  <%= render 'books/list', books: @book,user: current_user %>
             
         </div>
         

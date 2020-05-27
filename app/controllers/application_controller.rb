@@ -8,4 +8,6 @@ class ApplicationController < ActionController::Base
           user_path(@user)  #　指定したいパスに変更
         end
       end
+
+      
 end

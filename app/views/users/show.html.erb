@@ -5,24 +5,10 @@
 
 <div class="container"> <!-- ここを追加 -->
     <div class="row">   <!-- ここを追加 -->
-        <div class="col-lg-3" style="background-color: orange;"> 
-            <%= form_for(@book) do |f| %>
- 
-                <% if @book.errors.any? %>
-                    <%= @book.errors.count %>件のエラーが発生しました
-                    <% @book.errors.full_messages.each do |message| %>
-                        <%= message %>
-                    <% end %>
-                <% end %>
-             
-                <%= f.text_field :title %>
-                <%= f.text_area :body %>
-                <%= f.submit %>
-            <% end %>
+        <div class="col-lg-3" > 
+        <%= render 'books/list', books: @book,user: current_user %>
+
             
-            <% if @user.id == current_user.id %>
-                    <p><%= link_to "プロフィール編集", edit_user_path(@user), class: "pull-right" %></p>
-            <% end %>
             
             
         </div>
